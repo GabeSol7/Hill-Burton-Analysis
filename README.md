@@ -14,9 +14,9 @@ The analysis constructs a balanced panel dataset covering 48 states and provides
 ## File Structure
 
 ### 1. **Data**
-     - Contains the cleaned and processed datasets used for analysis:
-       - **`panel_data.csv`:** Balanced panel dataset with state-year predicted and actual Hill-Burton fund allocations.
-       - **`final_allocations.csv`:** Dataset with predicted allocations based on the Hill-Burton formula.
+   The folder contains the following cleaned and processed datasets used for analysis:
+   - **`panel_data.csv`:** A balanced panel dataset containing state-year predicted and actual Hill-Burton fund allocations.
+   - **`final_allocations.csv`:** A dataset containing predicted allocations based on the Hill-Burton formula.
 
 ### 2. **R Scripts**
    - **`Analysis-of-Hill-Burton-Allocations.R`:** The main analysis script, organized into the following sections:
