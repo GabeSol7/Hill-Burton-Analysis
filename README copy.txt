@@ -1,58 +1,77 @@
+README for Hill-Burton Allocation Analysis
 
-README: Data and Code for Hill-Burton Allocation Data Task for Professor Amy Finkelstein
+---
 
-Overview
-This folder contains the necessary files and scripts used to analyze the allocation of Hill-Burton hospital construction funds across U.S. states from 1947 to 1964. The aim of this analysis is twofold:
-1. Assess the empirical relevance of the minimum (0.33) and maximum (0.75) allotment percentage values by exploring their occurrence and impact in practice.
-2. Evaluate whether the predicted state allocations based on the Hill-Burton formula are a good predictor of actual federal allocations.
+## Overview
+This folder contains the necessary files and scripts used to analyze the allocation of Hill-Burton hospital construction funds across U.S. states from 1947 to 1964. The analysis addresses two key objectives:
+1. **Assess the Relevance of Allotment Thresholds:** Examine the empirical relevance of the minimum (0.33) and maximum (0.75) allotment percentage values by analyzing their occurrence and practical impact.
+2. **Predicted vs. Actual Allocations:** Evaluate whether the state-level allocations predicted by the Hill-Burton formula accurately reflect the actual federal allocations.
 
-The analysis includes the construction of a balanced panel dataset, covering 48 states, and provides insights through graphical and tabular summaries comparing predicted and actual allocations.
+The analysis constructs a balanced panel dataset covering 48 states and provides insights through detailed graphical and tabular summaries comparing predicted and actual allocations.
 
-File Structure
+---
 
-1. /data/
-   - /data/assembled/
-     - Final datasets used in the analysis, including:
-       - panel_data.csv: Balanced panel dataset containing state-year predicted and actual Hill-Burton funds allocations.
-       - final_allocations.csv: Dataset containing predicted Hill-Burton allocations based on the allocation formula used for analysis.
+## File Structure
 
-2. R Scripts:
-   - Analysis-of-Hill-Burton-Allocations.R: This script contains the analysis of the Hill-Burton allocations, which includes:
-     1. Evaluation of Allotment Percentages:
-        - Histograms and summary statistics to assess the occurrence of the minimum (0.33) and maximum (0.75) allotment percentage values.
-     2. Predicted vs Actual Allocations:
-        - A regression analysis comparing predicted versus actual Hill-Burton allocations.
-        - Graphs illustrating the relationship between predicted and actual allocations.
-        - A summary table showing the regression results and highlighting discrepancies.
+### 1. **Data**
+   - **/data/assembled/**
+     - Contains the cleaned and processed datasets used for analysis:
+       - **`panel_data.csv`:** Balanced panel dataset with state-year predicted and actual Hill-Burton fund allocations.
+       - **`final_allocations.csv`:** Dataset with predicted allocations based on the Hill-Burton formula.
 
-3. Final Write Up:
-   - The final write-up, titled *Investigating the Allocation of Hill-Burton Funding Across States*, documents the complete process of assembling the dataset and analyzing the results. It includes detailed descriptions of the methodology, results from the regression analysis, and the key findings on how well the predicted allocations matched the actual Hill-Burton funds across states. 
+### 2. **R Scripts**
+   - **`Analysis-of-Hill-Burton-Allocations.R`:** The main analysis script, organized into the following sections:
+     1. **Evaluation of Allotment Percentages:**
+        - Histograms and summary statistics analyzing the distribution of the 0.33 and 0.75 allotment thresholds.
+     2. **Predicted vs. Actual Allocations:**
+        - Regression analysis to assess the accuracy of predicted versus actual allocations.
+        - Graphs illustrating predicted versus actual allocations.
+        - A summary table highlighting key findings and discrepancies.
 
-Instructions for Running the Code
-1. Set Up Your Working Environment
-- Ensure your working directory is set to the location where the data files and scripts are saved. Modify the setwd() command in the scripts if necessary.
+### 3. **Final Write-Up**
+   - **`Investigating the Allocation of Hill-Burton Funding Across States`**: 
+     - Comprehensive documentation of the methodology, dataset assembly, analysis, and findings.
+     - Includes detailed regression results and a discussion of the alignment (or lack thereof) between predicted and actual allocations.
 
-2. Install Required Libraries
-- The following R libraries are required to run the scripts:
-  - tidyverse
-  - ggplot2
-  - stargazer
-  - knitr
+---
 
-4. Run the Analysis Script
-- Analysis-of-Hill-Burton-Allocations.R should be executed next. This script generates:
-  - Histograms showing the distribution of allotment percentages.
-  - A graph comparing predicted and actual Hill-Burton allocations.
-  - A summary table of regression results, evaluating the accuracy of predictions.
+## Instructions for Running the Analysis
 
-Final Output
-- The analysis produces:
-  - Graphs such as allotment_pct_histogram.png and predicted_vs_actual_allocations.png.
-  - A summary table of regression results saved as regression_summary.txt.
-  - Cleaned datasets (panel_data.csv and final_allocations.csv) for further exploration.
+### 1. Set Up Your Working Environment
+- Ensure your working directory is set to the location containing the data files and scripts. Update the `setwd()` command in the R script as needed.
 
-Contact
-For any questions regarding the analysis or code, please contact:
+### 2. Install Required R Libraries
+- Install the following R packages to run the script:
+  - `tidyverse`
+  - `ggplot2`
+  - `stargazer`
+  - `knitr`
 
-Gabriel Solis  
-Email: solisgab@usc.edu
+### 3. Run the Analysis Script
+- Execute **`Analysis-of-Hill-Burton-Allocations.R`**, which will:
+  - Generate histograms showing the distribution of allotment percentages.
+  - Create a graph comparing predicted and actual allocations.
+  - Produce a summary table of regression results evaluating the predictive accuracy of the Hill-Burton formula.
+
+---
+
+## Outputs
+
+### Final Results
+The analysis produces the following outputs:
+1. **Graphs:**
+   - **`allotment_pct_histogram.png`:** Visualizes the distribution of allotment percentages.
+   - **`predicted_vs_actual_allocations.png`:** Compares predicted and actual allocations across states.
+2. **Summary Table:**
+   - **`regression_summary.txt`:** A text file containing regression results, detailing the alignment between predicted and actual allocations.
+3. **Cleaned Datasets:**
+   - **`panel_data.csv` and `final_allocations.csv`:** Ready-to-use datasets for further exploration.
+
+---
+
+## Contact
+
+For any questions or feedback regarding this analysis, please contact:
+
+**Gabriel Solis**  
+Email: [solisgab@usc.edu](mailto:solisgab@usc.edu)
